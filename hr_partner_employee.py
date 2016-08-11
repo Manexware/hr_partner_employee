@@ -83,7 +83,7 @@ class res_partner(osv.osv):
                 employee_id=employee_obj.create(cr, uid, employee)
 
                 if employee_id:
-                    # cr.execute('UPDATE res_partner SET employee=TRUE WHERE id=%s' % (partner_id))
+                    cr.execute('UPDATE res_partner SET employee=TRUE WHERE id=%s' % (partner_id))
                     #
                     # #checks for the existence of a user associated to this partner
                     # user_obj=self.pool.get('res.users')
@@ -112,7 +112,7 @@ class res_partner(osv.osv):
                     #
                         #now, we put the user in the employee
                         # employee_obj.write(cr, uid, employee_id, {'user_id':user_id})
-                        employee_obj.write(cr, uid, employee_id, {'user_id':partner_res.related_user_id.id})
+                    employee_obj.write(cr, uid, employee_id, {'user_id':partner_res.related_user_id.id})
         return employee_id
         
 
