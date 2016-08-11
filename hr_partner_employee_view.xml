@@ -14,7 +14,7 @@
                 <xpath expr="//form/sheet" position="before">
                     <header>
                         <button name="create_employee" string="Create employee" type="object" groups="base.group_user"
-                                attrs="{'invisible': ['|','|',('employee','=', True),('is_company','=', True)]}"/>
+                                attrs="{'invisible': ['|',('employee','=', True),('is_company','=', True)]}"/>
                             <!--attrs="{'invisible': ['|','|',('employee','=', True),('is_company','=', True),('parent_id','!=', False)]}"/>-->
                     </header>
                 </xpath>
