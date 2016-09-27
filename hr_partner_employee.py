@@ -20,11 +20,16 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-from openerp import addons
-from openerp.osv import fields, osv
-from openerp import tools
-from openerp.tools.translate import _
+try:
+    from openerp import addons
+    from openerp.osv import fields, osv
+    from openerp import tools
+    from openerp.tools.translate import _
+except:
+    from odoo import addons
+    from odoo.osv import  osv
+    from odoo import tools
+    from odoo.tools.translate import _
 
 import uuid
 import string
